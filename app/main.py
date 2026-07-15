@@ -9,10 +9,13 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
-    result = []
-    for person_data in people:
-        person = Person(person_data["name"], person_data["age"])
-        result.append(person)
+    result = [
+        Person(
+            person_data["name"],
+            person_data["age"]
+        )
+        for person_data in people
+    ]
     for person_data in people:
         name = person_data["name"]
         person = Person.people[name]
