@@ -18,10 +18,6 @@ def create_person_list(people: list) -> list:
         person = Person.people[name]
         if person_data.get("wife"):
             person.wife = Person.people[person_data["wife"]]
-        else:
-            person.wife = None
         if person_data.get("husband"):
             person.husband = Person.people[person_data["husband"]]
-        else:
-            person.husband = None
     return result
